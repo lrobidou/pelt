@@ -1,0 +1,17 @@
+[package]
+name = "pelt"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.48", features = ["derive"] }
+# bin dependencies
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+
+[features]
+build-binary = ["serde", "serde_json"]
+
+[[bin]]
+name = "plot"
+required-features = ["build-binary"]
