@@ -3,7 +3,7 @@
 use std::collections::HashSet;
 
 use clap::Parser;
-use pelt::{pelt, score};
+use pelt_reindeer2::{pelt, score};
 
 /// Simple program to parse a list of integers
 #[derive(Parser, Debug)]
